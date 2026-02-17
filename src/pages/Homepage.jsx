@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 
 export default function Homepage() {
   return (
-    <div className="px-8">
+    <div className="">
       <LocationBar />
       <Navbar />
     </div>

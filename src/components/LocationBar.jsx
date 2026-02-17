@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 export default function LocationBar() {
   return (
-    <div className="flex h-10 items-center justify-between text-sm font-normal text-gray-600">
+    <div className="flex px-8 h-10 items-center justify-between text-sm font-normal text-gray-600">
       <div className="flex gap-1 items-center ">
         <MapPin strokeWidth={1} /> Store Location: Lincoln- 344, Illinois,
         Chicago, USA
