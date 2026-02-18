@@ -36,12 +36,12 @@ export default function HeaderSection() {
           <div className="text-green-600 text-sm font-medium">
             Welcome to Shopery
           </div>
-          <div className="text-6xl/20 font-semibold">
+          <div className="text-6xl/20 font-semibold text-neutral-900">
             Fresh & Healthy Organic Food
           </div>
-          <div className="flex gap-2 text-3xl/15">
+          <div className="flex gap-2 text-3xl/15 text-neutral-900">
             Sale up to{" "}
-            <div className="font-semibold text-orange-400">30% OFF</div>
+            <div className="font-semibold text-sale">30% OFF</div>
           </div>
           <div className="text-sm text-neutral-500">
             Free shipping on all your order. we deliver, you enjoy
