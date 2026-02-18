@@ -1,8 +1,36 @@
-import {ArrowRight} from "lucide-react";
+import { ArrowRight, Truck, Headset, ShoppingBag, Wallet } from "lucide-react";
 
 export default function HeaderSection() {
+  const serviceBlock = [
+    {
+      id: 1,
+      icon: <Truck size={42} strokeWidth={1} className="text-green-600" />,
+      title: "Free Shipping",
+      text: "Free shipping on all your order",
+    },
+    {
+      id: 2,
+      icon: <Headset size={42} strokeWidth={1} className="text-green-600" />,
+      title: "Customer Support 24/7",
+      text: "Instant access to Support",
+    },
+    {
+      id: 3,
+      icon: (
+        <ShoppingBag size={42} strokeWidth={1} className="text-green-600" />
+      ),
+      title: "100% Secure Payment",
+      text: "We ensure your money is save",
+    },
+    {
+      id: 4,
+      icon: <Wallet size={42} strokeWidth={1} className="text-green-600" />,
+      title: "Money-Back Guarantee",
+      text: "30 Days Money-Back Guarantee",
+    },
+  ];
   return (
-    <div className="bg-green-50">
+    <div className="bg-green-50 relative rounded-md mt-4">
       <div className="flex justify-between items-center h-full w-full gap-5 py-18 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="text-wrap">
           <div className="text-green-600 text-sm font-medium">
@@ -28,6 +56,26 @@ export default function HeaderSection() {
             alt="Vegetables"
             className="object-cover"
           />
+        </div>
+      </div>
+
+      <div className="grid justify-items-center">
+        <div className="absolute -bottom-1/10  h-30 bg-white flex items-center px-8 rounded-md shadow-lg">
+          <div className="flex gap-8 justify-between items-center">
+            {serviceBlock.map((item) => {
+              return (
+                <div key={item.id} className="flex space-x-4 items-center">
+                  {item.icon}
+                  <div className="space-y-1">
+                    <p className="text-base font-semibold text-gray-700">
+                      {item.title}
+                    </p>
+                    <p className="text-xs text-gray-500">{item.text}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>
