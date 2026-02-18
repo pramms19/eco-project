@@ -3,9 +3,9 @@ import { NavLink } from "react-router-dom";
 
 export default function LocationBar() {
   return (
-    <div className="flex px-8 h-10 items-center justify-between text-sm font-normal text-gray-600">
+    <div className="flex px-8 h-10 items-center justify-between text-sm font-normal text-neutral-600">
       <div className="flex gap-1 items-center ">
-        <MapPin strokeWidth={1} /> Store Location: Lincoln- 344, Illinois,
+        <MapPin size={20} strokeWidth={1} /> Store Location: Lincoln- 344, Illinois,
         Chicago, USA
       </div>
 
@@ -16,13 +16,13 @@ export default function LocationBar() {
         <div className="flex gap-1 items-center">
           USD <ChevronDown strokeWidth={1} />
         </div>
-        <div className="text-gray-400">|</div>
+        <div className="text-neutral-400">|</div>
         <div className="flex gap-1 items-center ">
-          <NavLink to="/signin" className="text-gray-600 hover:text-green-600">
+          <NavLink to="/signin" className="text-neutral-600 hover:text-green-600">
             Sign In/
           </NavLink>
 
-          <NavLink to="/signup" className="text-gray-600 hover:text-green-600">
+          <NavLink to="/signup" className="text-neutral-600 hover:text-green-600">
             Sign Up
           </NavLink>
         </div>
