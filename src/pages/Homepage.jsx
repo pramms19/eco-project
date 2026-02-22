@@ -3,15 +3,17 @@ import Navbar from "../components/Navbar";
 import MenuItems from "../components/MenuItems";
 import HeaderSection from "../components/HeaderSection";
 import { FeaturedProducts } from "../components/FeaturedProducts";
+import TopCategory from "../components/TopCategory";
 
 export default function Homepage() {
   return (
     <div className="">
       <LocationBar />
       <Navbar />
-      <MenuItems/>
-      <HeaderSection/>
-      <FeaturedProducts/>
+      <MenuItems />
+      <HeaderSection />
+      <FeaturedProducts />
+      <TopCategory />
     </div>
   );
 }
