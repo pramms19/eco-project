@@ -32,9 +32,9 @@ export function FeaturedProducts() {
 
       {/* Product Cards */}
       <div className="grid grid-cols-5 gap-5">
-        {card.map((item) => {
-          return <ProductCard key={item.id} item={item} />;
-        })}
+        {card.map((item) => (
+          <ProductCard key={item.id} item={item} />
+        ))}
       </div>
 
       {/* Hot Deals */}
