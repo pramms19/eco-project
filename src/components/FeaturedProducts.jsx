@@ -26,12 +26,12 @@ export function FeaturedProducts() {
   ];
   return (
     <div className="mt-14 px-16">
-      <div className=" py-14 text-4xl font-semibold text-neutral-900 text-center">
+      <div className=" py-14 text-4xl font-semibold text-secondary text-center">
         Feature Products
       </div>
 
       {/* Product Cards */}
-      <div className="flex justify-between gap-5">
+      <div className="grid grid-cols-5 gap-5">
         {card.map((item) => {
           return <ProductCard key={item.id} item={item} />;
         })}
@@ -39,7 +39,6 @@ export function FeaturedProducts() {
 
       {/* Hot Deals */}
       <DealsSection />
-      
     </div>
   );
 }

@@ -5,8 +5,8 @@ export default function LocationBar() {
   return (
     <div className="flex px-8 h-10 items-center justify-between text-xs font-normal text-neutral-600">
       <div className="flex gap-1 items-center ">
-        <MapPin size={20} strokeWidth={1} /> Store Location: Lincoln- 344, Illinois,
-        Chicago, USA
+        <MapPin size={20} strokeWidth={1} /> Store Location: Lincoln- 344,
+        Illinois, Chicago, USA
       </div>
 
       <div className="flex gap-2 items-center">
@@ -18,11 +18,11 @@ export default function LocationBar() {
         </div>
         <div className="text-neutral-400 text-lg font-light">|</div>
         <div className="flex gap-1 items-center ">
-          <NavLink to="/signin" className="text-neutral-600 hover:text-green-600">
+          <NavLink to="/signin" className="text-neutral-600 hover:text-primary">
             Sign In/
           </NavLink>
 
-          <NavLink to="/signup" className="text-neutral-600 hover:text-green-600">
+          <NavLink to="/signup" className="text-neutral-600 hover:text-primary">
             Sign Up
           </NavLink>
         </div>

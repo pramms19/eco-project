@@ -6,7 +6,9 @@ export default function Navbar() {
       <div className="px-8 h-20 flex items-center justify-between">
         <div className="flex gap-2 items-center">
           <img src="/assets/logo.png" alt="Logo" />
-          <p className="font-semibold text-neutral-800 text-xl lg:text-3xl">Eco</p>
+          <p className="font-semibold text-neutral-800 text-xl lg:text-3xl">
+            Eco
+          </p>
         </div>
 
         <div className="border border-neutral-200 rounded-sm flex gap-50 items-center pl-2">
@@ -14,7 +16,7 @@ export default function Navbar() {
             <Search strokeWidth={1} size={20} />
             <div className="font-normal text-sm text-gray-400">Search</div>
           </div>
-          <div className="bg-green-600 text-neutral-100 rounded-r-sm text-sm py-2 px-3">
+          <div className="bg-primary text-neutral-100 rounded-r-sm text-sm py-2 px-3">
             Search
           </div>
         </div>
@@ -27,8 +29,12 @@ export default function Navbar() {
               <ShoppingBasket size={28} strokeWidth={1} />
             </div>
             <div>
-              <div className="font-normal text-xs text-neutral-400">Shopping Cart:</div>
-              <div className="text-base text-neutral-800 font-medium">$60.00</div>
+              <div className="font-normal text-xs text-neutral-400">
+                Shopping Cart:
+              </div>
+              <div className="text-base text-neutral-800 font-medium">
+                $60.00
+              </div>
             </div>
           </div>
         </div>
