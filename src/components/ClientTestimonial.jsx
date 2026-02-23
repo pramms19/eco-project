@@ -58,6 +58,7 @@ export default function ClientTestimonial() {
   const prevSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex <= 0 ? maxIndex : prevIndex - 1));
   };
+  const translateValue = currentIndex * (100 / cardsToShow);
 
   return (
     <div className="py-14">
@@ -71,7 +72,7 @@ export default function ClientTestimonial() {
             <div
               className="flex transition-transform duration-300 ease-in-out gap-4"
               style={{
-                transform: `translateX(-${currentIndex * (100 / cardsToShow)}%)`,
+                transform: `translateX(-${translateValue}%)`,
               }}
             >
               {customer.map((item, index) => {

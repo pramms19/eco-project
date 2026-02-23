@@ -6,6 +6,7 @@ import { FeaturedProducts } from "../components/FeaturedProducts";
 import TopCategory from "../components/TopCategory";
 import NewestProducts from "../components/NewestProducts";
 import ClientTestimonial from "../components/ClientTestimonial";
+import SocialMedia from "../components/SocialMedia";
 
 export default function Homepage() {
   return (
@@ -18,6 +19,7 @@ export default function Homepage() {
       <TopCategory />
       <NewestProducts />
       <ClientTestimonial />
+      <SocialMedia />
     </div>
   );
 }

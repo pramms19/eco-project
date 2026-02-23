@@ -1,4 +1,4 @@
-import { Heart, Search, ShoppingBasket } from "lucide-react";
+import { Heart, Search, Handbag } from "lucide-react";
 
 export default function Navbar() {
   return (
@@ -26,7 +26,7 @@ export default function Navbar() {
           <div className="text-neutral-400 text-2xl font-light">|</div>
           <div className="flex gap-2">
             <div className="flex items-center">
-              <ShoppingBasket size={28} strokeWidth={1} />
+              <Handbag size={28} strokeWidth={1} />
             </div>
             <div>
               <div className="font-normal text-xs text-neutral-400">

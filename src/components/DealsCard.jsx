@@ -1,4 +1,4 @@
-import { ShoppingBasket, Star } from "lucide-react";
+import { Handbag, Star } from "lucide-react";
 
 export default function DealsCard({ item }) {
   return (
