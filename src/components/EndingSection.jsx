@@ -1,0 +1,33 @@
+export default function EndingSection() {
+  return (
+    <div className="bg-background px-16 mt-14 py-8">
+      <div className="flex justify-between items-center">
+        <div className="flex gap-2 items-center">
+          <img src="/assets/logo.png" alt="Logo" />
+          <p className="font-semibold text-neutral-800 text-xl lg:text-3xl">
+            Eco
+          </p>
+        </div>
+
+        <div>
+          <div className="text-secondary text-2xl font-medium">
+            Subcribe our Newsletter
+          </div>
+          <p className="text-sm text-gray-400">
+            Pellentesque eu nibh eget mauris congue mattis matti.
+          </p>
+        </div>
+
+        <div className="flex border bg-white border-neutral-200 rounded-full gap-40 items-center pl-2 h-9">
+          <div className="font-normal text-sm text-gray-400 pl-2">
+            Your Email Address
+          </div>
+
+          <button className="bg-primary hover:bg-dark text-neutral-100 rounded-full text-sm py-2 px-3">
+            Subscribe
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}

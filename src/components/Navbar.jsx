@@ -16,9 +16,9 @@ export default function Navbar() {
             <Search strokeWidth={1} size={20} />
             <div className="font-normal text-sm text-gray-400">Search</div>
           </div>
-          <div className="bg-primary text-neutral-100 rounded-r-sm text-sm py-2 px-3">
+          <button className="bg-primary text-neutral-100 hover:bg-dark rounded-r-sm text-sm py-2 px-3">
             Search
-          </div>
+          </button>
         </div>
 
         <div className="hidden md:flex gap-1 items-center">

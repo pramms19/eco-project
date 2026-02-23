@@ -29,7 +29,7 @@ export default function ClientTestimonial() {
       text: "Customer",
     },
     {
-      id: 1,
+      id: 4,
       review:
         "Pellentesque eu nibh eget mauris congue mattis mattis nec tellus.Phasellus imperdiet elit eu magna dictum, bibendum cursus velitsodales. Donec sed neque eget",
       profile: "/assets/m1.jpg",
@@ -37,7 +37,7 @@ export default function ClientTestimonial() {
       text: "Customer",
     },
     {
-      id: 2,
+      id: 5,
       review:
         "Pellentesque eu nibh eget mauris congue mattis mattis nec tellus.Phasellus imperdiet elit eu magna dictum, bibendum cursus velitsodales. Donec sed neque eget",
       profile: "/assets/m2.jpg",
