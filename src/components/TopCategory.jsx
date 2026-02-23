@@ -68,7 +68,7 @@ export default function TopCategory() {
               return (
                 <div
                   key={item.id}
-                  className="border border-neutral-200 hover:border-primary hover:shadow-lg hover:shadow-green-50 rounded-sm flex flex-col items-center place-content-center p-6 text-center flex-shrink-0"
+                  className="border border-neutral-200 hover:border-primary hover:shadow-lg hover:shadow-green-50 rounded-sm flex flex-col items-center place-content-center p-6 text-center shrink-0"
                   style={{ width: `calc(${100 / cardsToShow}% - 1rem)` }}
                 >
                   <img
