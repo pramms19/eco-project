@@ -11,7 +11,7 @@ export default function Navbar() {
           </p>
         </div>
 
-        <div className="border border-neutral-200 rounded-sm flex gap-50 items-center pl-2">
+        <div className="hidden md:flex border border-neutral-200 rounded-sm gap-50 items-center pl-2">
           <div className="flex gap-1">
             <Search strokeWidth={1} size={20} />
             <div className="font-normal text-sm text-gray-400">Search</div>
@@ -21,7 +21,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        <div className="flex gap-1 items-center">
+        <div className="hidden md:flex gap-1 items-center">
           <Heart size={28} strokeWidth={1} />
           <div className="text-neutral-400 text-2xl font-light">|</div>
           <div className="flex gap-2">

@@ -29,12 +29,12 @@ export default function HeaderSection() {
   ];
   return (
     <div className="bg-green-50 relative rounded-md mt-4">
-      <div className="flex justify-between items-center h-full w-full gap-5 py-18 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div className="text-wrap">
-          <div className="text-primary text-sm font-medium">
+      <div className="md:flex justify-between items-center h-full w-full gap-5 py-18 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        <div className="text-wrap justify-items-center md:justify-items-normal">
+          <div className="text-primary sm:text-xs md:text-sm font-medium pb-2 md:pb-0">
             Welcome to Shopery
           </div>
-          <div className="text-6xl/20 font-semibold text-secondary">
+          <div className="text-4xl/10 md:text-5xl/15 lg:text-6xl/20 font-semibold text-secondary text-center md:text-left">
             Fresh & Healthy Organic Food
           </div>
           <div className="flex gap-2 text-3xl/15 text-secondary">

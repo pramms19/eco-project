@@ -1,6 +1,12 @@
 import { ArrowRight } from "lucide-react";
 
 export default function SaleSection() {
+  // const time = [
+  //   { id: 1, number: "00", text: "DAYS" },
+  //   { id: 2, number: "06", text: "HOURS" },
+  //   { id: 3, number: "06", text: "MINS" },
+  //   { id: 4, number: "84", text: "SECS" },
+  // ];
   return (
     <div className="py-14">
       <div className="grid grid-cols-3 gap-5">
@@ -11,6 +17,30 @@ export default function SaleSection() {
               <div className="text-white text-4xl font-semibold">
                 Sale Of The Month
               </div>
+
+              <div className="grid grid-cols-4">
+                {/* {time.map((item) => { */}
+                <div>
+                  <div className="text-white text-2xl flex gap-2 justify-center">00 </div>
+                  <div className="text-white text-xs flex gap-2 justify-center">DAYS</div>
+                </div>
+                <div>
+                  <div className="text-white text-2xl flex gap-2 justify-center">06 </div>
+                  <div className="text-white text-xs flex gap-2 justify-center">HOURS</div>
+                </div>
+                <div>
+                  <div className="text-white text-2xl flex gap-2 justify-center">06 </div>
+                  <div className="text-white text-xs flex gap-2 justify-center">MINS</div>
+                </div>
+                <div>
+                  <div className="text-white text-2xl flex gap-2 justify-center">35</div>
+                  <div className="text-white text-xs flex gap-2 justify-center">SECS</div>
+                </div>
+                
+              {/* })} */}
+              </div>
+              
+
               <button className="rounded-full flex gap-2 justify-self-center bg-neutral-50 mt-4 px-4 lg:px-5 py-2.5 text-sm lg:text-base font-medium text-primary hover:bg-background">
                 Shop now <ArrowRight />
               </button>

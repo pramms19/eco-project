@@ -8,8 +8,9 @@ export default function MenuItems() {
     { id: 3, name: "Pages", to: "/" },
     { id: 4, name: "Blog", to: "/" },
   ];
+
   return (
-    <div className="bg-neutral-800 h-14 px-8 flex items-center justify-between">
+    <div className="bg-neutral-800 h-14 px-8 hidden md:flex items-center justify-between">
       <div className="relative hidden md:block">
         <div className="flex space-x-4 items-center text-sm font-medium">
           {navItems.map((item) => {
