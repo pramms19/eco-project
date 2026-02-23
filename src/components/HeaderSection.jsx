@@ -28,7 +28,7 @@ export default function HeaderSection() {
     },
   ];
   return (
-    <div className="bg-green-50 relative rounded-md mt-4">
+    <div className="bg-background relative rounded-md mt-4">
       <div className="md:flex justify-between items-center h-full w-full gap-5 py-18 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="text-wrap justify-items-center md:justify-items-normal">
           <div className="text-primary sm:text-xs md:text-sm font-medium pb-2 md:pb-0">
