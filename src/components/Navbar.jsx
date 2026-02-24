@@ -14,7 +14,7 @@ export default function Navbar() {
         <div className="hidden md:flex border border-neutral-200 rounded-sm gap-50 items-center pl-2">
           <div className="flex gap-1">
             <Search strokeWidth={1} size={20} />
-            <div className="font-normal text-sm text-gray-400">Search</div>
+            <div className="font-normal text-sm text-neutral-400">Search</div>
           </div>
           <button className="bg-primary text-neutral-100 hover:bg-dark rounded-r-sm text-sm py-2 px-3">
             Search

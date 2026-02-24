@@ -13,13 +13,13 @@ export default function EndingSection() {
           <div className="text-secondary text-2xl font-medium">
             Subcribe our Newsletter
           </div>
-          <p className="text-sm text-gray-400">
+          <p className="text-sm text-neutral-400">
             Pellentesque eu nibh eget mauris congue mattis matti.
           </p>
         </div>
 
         <div className="flex border bg-white border-neutral-200 rounded-full gap-40 items-center pl-2 h-9">
-          <div className="font-normal text-sm text-gray-400 pl-2">
+          <div className="font-normal text-sm text-neutral-400 pl-2">
             Your Email Address
           </div>
 

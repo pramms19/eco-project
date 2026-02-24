@@ -94,7 +94,9 @@ export default function ClientTestimonial() {
                           <p className="text-base font-medium text-secondary">
                             {item.name}
                           </p>
-                          <p className="text-sm text-gray-400">{item.text}</p>
+                          <p className="text-sm text-neutral-400">
+                            {item.text}
+                          </p>
                         </div>
                       </div>
 
