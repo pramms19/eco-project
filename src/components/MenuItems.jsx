@@ -13,7 +13,6 @@ export default function MenuItems() {
 
   return (
     <div className="bg-neutral-800 px-4 sm:px-6 lg:px-8 ">
-      {/* Top Bar */}
       <div className="h-14 max-w-7xl mx-auto px-4 flex items-center justify-between">
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-4 items-center text-sm font-medium">
@@ -39,7 +38,6 @@ export default function MenuItems() {
           </NavLink>
         </div>
 
-        {/* Phone (Desktop) */}
         <div className="hidden md:flex gap-1 items-center text-neutral-200">
           <PhoneCall size={20} />
           (219) 555-0114
@@ -56,7 +54,7 @@ export default function MenuItems() {
 
       {/* Mobile Menu */}
       {open && (
-        <div className="md:hidden bg-neutral-900 px-4 py-4 space-y-3">
+        <div className="md:hidden px-4 pb-4 space-y-3">
           {navItems.map((item) => (
             <NavLink
               key={item.id}
@@ -82,7 +80,6 @@ export default function MenuItems() {
             Contact Us
           </NavLink>
 
-          {/* Phone (Mobile) */}
           <div className="flex gap-2 items-center text-neutral-300 pt-3 border-t border-neutral-700">
             <PhoneCall size={18} />
             (219) 555-0114

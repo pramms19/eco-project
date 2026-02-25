@@ -43,7 +43,7 @@ export default function DealsSection() {
         })}
       </div>
 
-      <div className="relative bg-[url(/assets/bg1.jpg)] h-55 lg:h-105 max-w-full lg:max-w-sm md:object-contain overflow-hidden rounded-md col-span-1 md:col-span-3 lg:col-span-1 ">
+      <div className="relative bg-[url(/assets/bg1.jpg)] bg-cover bg-center h-65 lg:h-105 max-w-full lg:max-w-sm overflow-hidden rounded-md col-span-1 md:col-span-3 lg:col-span-1 ">
         {/* <img
           src="/assets/bg1.jpg"
           className="h-105 max-w-sm object-contain overflow-hidden rounded-md"

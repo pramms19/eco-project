@@ -9,8 +9,10 @@ export default function SaleSection() {
   // ];
   return (
     <div className="px-4 sm:px-6 lg:px-8 py-14">
-      <div className="grid grid-col-1 lg:grid-cols-3 gap-5 justify-items-center">
-        <div className="bg-[url(/assets/monthbg.png)] h-105 w-full object-contain overflow-hidden rounded-md">
+      <div className="grid grid-col-1 lg:grid-cols-3 gap-5">
+        
+        {/* Card */}
+        <div className="bg-[url(/assets/monthbg.jpg)] bg-cover bg-center h-85 lg:h-105 w-auto overflow-hidden rounded-md">
           <div className="grid justify-items-center">
             <div className="pt-8 text-center space-y-5">
               <div className="text-sm text-white font-medium">BEST DEALS</div>
@@ -63,7 +65,7 @@ export default function SaleSection() {
           </div>
         </div>
 
-        <div className="bg-[url(/assets/meatbg.png)] h-105 w-full object-contain overflow-hidden rounded-md">
+        <div className="bg-[url(/assets/meatbg.jpg)] bg-cover bg-center h-85 lg:h-105 w-auto overflow-hidden rounded-md">
           <div className="grid justify-items-center">
             <div className="pt-8 text-center space-y-5">
               <div className="text-sm text-white font-medium">85% FAT FREE</div>
@@ -80,7 +82,7 @@ export default function SaleSection() {
           </div>
         </div>
 
-        <div className="bg-[url(/assets/fruitbg.png)] h-105 w-full object-contain overflow-hidden rounded-md">
+        <div className="bg-[url(/assets/fruitbg.jpg)] bg-cover bg-center h-85 lg:h-105 w-auto overflow-hidden rounded-md">
           <div className="grid justify-items-center">
             <div className="pt-8 text-center space-y-5">
               <div className="text-sm text-secondary font-medium">
@@ -90,8 +92,7 @@ export default function SaleSection() {
                 100% Fresh Fruit
               </div>
               <div className="text-secondary text-lg flex gap-2 justify-center">
-                {" "}
-                Up to{" "}
+                Up to
                 <div className="bg-secondary rounded-md text-yellow font-semibold px-2">
                   60% OFF
                 </div>

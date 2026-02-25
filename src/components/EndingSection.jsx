@@ -23,7 +23,7 @@ export default function EndingSection() {
             Your Email Address
           </div>
 
-          <button className="bg-primary hover:bg-dark text-neutral-100 rounded-full text-sm py-2 px-3">
+          <button className="bg-primary hover:bg-dark text-neutral-100 rounded-r-full text-sm py-2 px-3">
             Subscribe
           </button>
         </div>

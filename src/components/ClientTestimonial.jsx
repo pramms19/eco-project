@@ -131,13 +131,13 @@ export default function ClientTestimonial() {
             </div>
           </div>
           <button
-            className="absolute top-1/2 left-5 transform -translate-y-1/2 bg-background hover:bg-primary text-secondary hover:text-white rounded-full p-2"
+            className="absolute top-1/2 -left-2 transform -translate-y-1/2 bg-neutral-200 hover:bg-primary text-secondary hover:text-white rounded-full p-2"
             onClick={prevSlide}
           >
             <ArrowLeft />
           </button>
           <button
-            className="absolute top-1/2 right-5 transform -translate-y-1/2 bg-background hover:bg-primary text-secondary hover:text-white rounded-full p-2"
+            className="absolute top-1/2 -right-2 transform -translate-y-1/2 bg-neutral-200 hover:bg-primary text-secondary hover:text-white rounded-full p-2"
             onClick={nextSlide}
           >
             <ArrowRight />

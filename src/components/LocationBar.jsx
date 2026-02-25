@@ -11,7 +11,11 @@ export default function LocationBar() {
 
       <div className="flex gap-2 items-center">
         <div className="flex gap-1 items-center">
-          Eng <ChevronDown strokeWidth={1} />
+          {/* Eng <ChevronDown strokeWidth={1} /> */}
+          <select>
+            <option value="eng">Eng</option>
+            <option value="np">Np</option>
+          </select>
         </div>
         <div className="flex gap-1 items-center">
           USD <ChevronDown strokeWidth={1} />
@@ -19,9 +23,9 @@ export default function LocationBar() {
         <div className="text-neutral-400 text-lg font-light">|</div>
         <div className="flex gap-1 items-center ">
           <NavLink to="/signin" className="text-neutral-600 hover:text-primary">
-            Sign In/
+            Sign In
           </NavLink>
-
+          <span>/</span>
           <NavLink to="/signup" className="text-neutral-600 hover:text-primary">
             Sign Up
           </NavLink>
