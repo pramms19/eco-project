@@ -28,13 +28,13 @@ export default function HeaderSection() {
     },
   ];
   return (
-    <div className="bg-background relative rounded-md mt-4">
-      <div className="md:flex justify-between items-center h-full w-full gap-5 py-18 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div className="text-wrap justify-items-center md:justify-items-normal">
-          <div className="text-primary sm:text-xs md:text-sm font-medium pb-2 md:pb-0">
+    <div className="bg-background relative rounded-md mt-4 px-4 sm:px-6 lg:px-8 ">
+      <div className="lg:flex justify-between space-y-5 h-full w-full gap-5 py-18 mx-auto max-w-7xl pb-8 md:pb-2 lg:pb-0">
+        <div className="text-wrap justify-items-center lg:justify-items-normal">
+          <div className="text-primary text-xs md:text-sm font-medium pb-2 md:pb-0">
             Welcome to Shopery
           </div>
-          <div className="text-4xl/10 md:text-5xl/15 lg:text-6xl/20 font-semibold text-secondary text-center md:text-left">
+          <div className="text-4xl/10 md:text-5xl/15 lg:text-6xl/20 font-semibold text-secondary text-center lg:text-left">
             Fresh & Healthy Organic Food
           </div>
           <div className="flex gap-2 text-3xl/15 text-secondary">
@@ -47,18 +47,18 @@ export default function HeaderSection() {
             Shop now <ArrowRight />
           </button>
         </div>
-        <div className="md:shrink-0 max-w-2xl">
+        <div className="place-items-center">
           <img
             src="/assets/vegs.png"
             alt="Vegetables"
-            className="object-cover"
+            className="object-cover md:shrink-0 max-w-sm md:max-w-xl lg:max-w-2xl"
           />
         </div>
       </div>
 
       <div className="grid justify-items-center">
-        <div className="absolute -bottom-1/10  h-30 bg-white flex items-center px-8 rounded-md shadow-lg">
-          <div className="flex gap-8 justify-between items-center">
+        <div className="absolute -bottom-2/5 md:-bottom-1/6 lg:-bottom-1/8  h-fit lg:h-30 bg-white flex items-center px-8 py-4 lg:py-0 rounded-md shadow-lg">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-center">
             {serviceBlock.map((item) => {
               return (
                 <div key={item.id} className="flex space-x-4 items-center">

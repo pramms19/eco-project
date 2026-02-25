@@ -1,5 +1,5 @@
 import { Star } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
 export default function ClientTestimonial() {
@@ -48,8 +48,25 @@ export default function ClientTestimonial() {
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const cardsToShow = 3; // Number of cards to show at once
+  const [cardsToShow, setCardsToShow] = useState(3); // Number of cards to show at once
   const maxIndex = customer.length - cardsToShow;
+
+  useEffect(() => {
+    const updateCards = () => {
+      if (window.innerWidth < 640) {
+        setCardsToShow(1);
+      } else if (window.innerWidth < 1024) {
+        setCardsToShow(2);
+      } else {
+        setCardsToShow(3);
+      }
+    };
+    updateCards();
+    window.addEventListener("resize", updateCards);
+    return () => {
+      window.removeEventListener("resize", updateCards);
+    };
+  }, []);
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex >= maxIndex ? 0 : prevIndex + 1));
@@ -62,8 +79,8 @@ export default function ClientTestimonial() {
 
   return (
     <div className="py-14">
-      <div className="bg-background px-16 py-14">
-        <div className="text-4xl font-semibold text-secondary pb-10 text-center">
+      <div className="bg-background px-4 sm:px-6 lg:px-8 py-14">
+        <div className="text-2xl md:text-3xl lg:text-4xl font-semibold text-secondary pb-10 text-center">
           Client Testimonial
         </div>
 
@@ -114,13 +131,13 @@ export default function ClientTestimonial() {
             </div>
           </div>
           <button
-            className="absolute top-1/2 -left-10 transform -translate-y-1/2 bg-white hover:bg-primary text-secondary hover:text-white rounded-full p-2"
+            className="absolute top-1/2 left-5 transform -translate-y-1/2 bg-background hover:bg-primary text-secondary hover:text-white rounded-full p-2"
             onClick={prevSlide}
           >
             <ArrowLeft />
           </button>
           <button
-            className="absolute top-1/2 -right-10 transform -translate-y-1/2 bg-white hover:bg-primary text-secondary hover:text-white rounded-full p-2"
+            className="absolute top-1/2 right-5 transform -translate-y-1/2 bg-background hover:bg-primary text-secondary hover:text-white rounded-full p-2"
             onClick={nextSlide}
           >
             <ArrowRight />

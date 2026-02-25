@@ -8,11 +8,11 @@ export default function SaleSection() {
   //   { id: 4, number: "84", text: "SECS" },
   // ];
   return (
-    <div className="py-14">
-      <div className="grid grid-cols-3 gap-5">
-        <div className="relative bg-[url(/assets/monthbg.png)] h-105 max-w-sm object-contain overflow-hidden rounded-md">
+    <div className="px-4 sm:px-6 lg:px-8 py-14">
+      <div className="grid grid-col-1 lg:grid-cols-3 gap-5 justify-items-center">
+        <div className="bg-[url(/assets/monthbg.png)] h-105 w-full object-contain overflow-hidden rounded-md">
           <div className="grid justify-items-center">
-            <div className="absolute top-1/12 text-center space-y-5">
+            <div className="pt-8 text-center space-y-5">
               <div className="text-sm text-white font-medium">BEST DEALS</div>
               <div className="text-white text-4xl font-semibold">
                 Sale Of The Month
@@ -21,25 +21,40 @@ export default function SaleSection() {
               <div className="grid grid-cols-4">
                 {/* {time.map((item) => { */}
                 <div>
-                  <div className="text-white text-2xl flex gap-2 justify-center">00 </div>
-                  <div className="text-white text-xs flex gap-2 justify-center">DAYS</div>
+                  <div className="text-white text-2xl flex gap-2 justify-center">
+                    00{" "}
+                  </div>
+                  <div className="text-white text-xs flex gap-2 justify-center">
+                    DAYS
+                  </div>
                 </div>
                 <div>
-                  <div className="text-white text-2xl flex gap-2 justify-center">06 </div>
-                  <div className="text-white text-xs flex gap-2 justify-center">HOURS</div>
+                  <div className="text-white text-2xl flex gap-2 justify-center">
+                    06{" "}
+                  </div>
+                  <div className="text-white text-xs flex gap-2 justify-center">
+                    HOURS
+                  </div>
                 </div>
                 <div>
-                  <div className="text-white text-2xl flex gap-2 justify-center">06 </div>
-                  <div className="text-white text-xs flex gap-2 justify-center">MINS</div>
+                  <div className="text-white text-2xl flex gap-2 justify-center">
+                    06{" "}
+                  </div>
+                  <div className="text-white text-xs flex gap-2 justify-center">
+                    MINS
+                  </div>
                 </div>
                 <div>
-                  <div className="text-white text-2xl flex gap-2 justify-center">35</div>
-                  <div className="text-white text-xs flex gap-2 justify-center">SECS</div>
+                  <div className="text-white text-2xl flex gap-2 justify-center">
+                    35
+                  </div>
+                  <div className="text-white text-xs flex gap-2 justify-center">
+                    SECS
+                  </div>
                 </div>
-                
-              {/* })} */}
+
+                {/* })} */}
               </div>
-              
 
               <button className="rounded-full flex gap-2 justify-self-center bg-neutral-50 mt-4 px-4 lg:px-5 py-2.5 text-sm lg:text-base font-medium text-primary hover:bg-background">
                 Shop now <ArrowRight />
@@ -48,9 +63,9 @@ export default function SaleSection() {
           </div>
         </div>
 
-        <div className="relative bg-[url(/assets/meatbg.png)] h-105 max-w-sm object-contain overflow-hidden rounded-md">
+        <div className="bg-[url(/assets/meatbg.png)] h-105 w-full object-contain overflow-hidden rounded-md">
           <div className="grid justify-items-center">
-            <div className="absolute top-1/12 text-center space-y-5">
+            <div className="pt-8 text-center space-y-5">
               <div className="text-sm text-white font-medium">85% FAT FREE</div>
               <div className="text-white text-4xl font-semibold">
                 Low-Fat Meat
@@ -65,9 +80,9 @@ export default function SaleSection() {
           </div>
         </div>
 
-        <div className="relative bg-[url(/assets/fruitbg.png)] h-105 max-w-sm object-contain overflow-hidden rounded-md">
+        <div className="bg-[url(/assets/fruitbg.png)] h-105 w-full object-contain overflow-hidden rounded-md">
           <div className="grid justify-items-center">
-            <div className="absolute top-1/12 text-center space-y-5">
+            <div className="pt-8 text-center space-y-5">
               <div className="text-sm text-secondary font-medium">
                 SUMMER SALE
               </div>

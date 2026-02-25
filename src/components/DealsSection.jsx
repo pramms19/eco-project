@@ -10,45 +10,44 @@ export default function DealsSection() {
       price: "$14.99",
     },
     {
-      id: 1,
+      id: 2,
       image: "/assets/lettuce.png",
       name: "Green Lettuce",
       price: "$14.99",
     },
     {
-      id: 1,
+      id: 3,
       image: "/assets/capsicum.png",
       name: "Green Capsicum",
       price: "$14.99",
     },
   ];
   return (
-    <div className="flex justify-between gap-6 py-10">
+    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 py-10 ">
       <div className=" grid grid-cols-1 gap-4">
-        <div className="text-xl font-medium text-secondary">Hot Deals</div>
+        <div className="text-xl font-medium text-secondary text-center lg:text-left">Hot Deals</div>
         {card.map((item) => {
           return <DealsCard key={item.id} item={item} />;
         })}
       </div>
       <div className="grid grid-cols-1 gap-4">
-        <div className="text-xl font-medium text-secondary">Best Seller</div>
+        <div className="text-xl font-medium text-secondary text-center lg:text-left">Best Seller</div>
         {card.map((item) => {
           return <DealsCard key={item.id} item={item} />;
         })}
       </div>
       <div className="grid grid-cols-1 gap-4">
-        <div className="text-xl font-medium text-secondary">Top Rated</div>
+        <div className="text-xl font-medium text-secondary text-center lg:text-left">Top Rated</div>
         {card.map((item) => {
           return <DealsCard key={item.id} item={item} />;
         })}
       </div>
 
-      <div className="relative">
-        <img
+      <div className="relative bg-[url(/assets/bg1.jpg)] h-55 lg:h-105 max-w-full lg:max-w-sm md:object-contain overflow-hidden rounded-md col-span-1 md:col-span-3 lg:col-span-1 ">
+        {/* <img
           src="/assets/bg1.jpg"
           className="h-105 max-w-sm object-contain overflow-hidden rounded-md"
-        />
-        {/* <div className="bg-[url(/assets/bg1.png)] bg-fixed w-full"> */}
+        /> */}
         <div className="grid justify-items-center">
           <div className="absolute top-1/8 text-center">
             <div className="text-sm font-medium text-secondary">
