@@ -14,10 +14,10 @@ export function ProductSkeletonCard() {
   );
 }
 
-export function ProductSkeleton({length}) {
+export function ProductSkeleton({ length }) {
   return (
     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
-      {Array.from({ length }).map((product,index) => (
+      {Array.from({ length }).map((product, index) => (
         <ProductSkeletonCard key={index} />
       ))}
     </div>

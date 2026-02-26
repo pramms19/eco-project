@@ -1,13 +1,13 @@
 import { ArrowRight } from "lucide-react";
 import DealsCard from "./DealsCard";
 import { Suspense, use } from "react";
-import {ProductSkeletonCard} from "./ProductSkeletonCard";
 import { fetchProducts } from "../actions/fetchproducts";
+import { DealsSkeleton } from "./DealsSkeletonCard";
 
 export default function DealsSection() {
   const products = fetchProducts(3);
   return (
-    <Suspense fallback={<ProductSkeletonCard />}>
+    <Suspense fallback={<DealsSkeleton length={3} />}>
       <NewDealsSection products={products} />
     </Suspense>
   );
