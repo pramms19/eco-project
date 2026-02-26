@@ -14,11 +14,15 @@ export default function LocationBar() {
           {/* Eng <ChevronDown strokeWidth={1} /> */}
           <select>
             <option value="eng">Eng</option>
-            <option value="np">Np</option>
+            <option value="nep">Nep</option>
           </select>
         </div>
         <div className="flex gap-1 items-center">
-          USD <ChevronDown strokeWidth={1} />
+          {/* USD <ChevronDown strokeWidth={1} /> */}
+          <select>
+            <option value="usd">USD</option>
+            <option value="npr">NPR</option>
+          </select>
         </div>
         <div className="text-neutral-400 text-lg font-light">|</div>
         <div className="flex gap-1 items-center ">
