@@ -1,30 +1,22 @@
 import { NavLink } from "react-router-dom";
 import ProductCard from "./ProductCard";
 import { ArrowRight } from "lucide-react";
+import { Suspense, use } from "react";
+import { fetchProducts } from "../actions/fetchproducts";
+import { ProductSkeleton } from "./ProductSkeletonCard";
 
 export default function NewestProducts() {
-  const card = [
-    { id: 1, image: "/assets/apple.png", name: "Green Apple", price: "$14.99" },
-    {
-      id: 2,
-      image: "/assets/leaf.png",
-      name: "Chinese Cabbage",
-      price: "$14.99",
-    },
-    {
-      id: 3,
-      image: "/assets/lettuce.png",
-      name: "Green Lettuce",
-      price: "$14.99",
-    },
-    {
-      id: 4,
-      image: "/assets/capsicum.png",
-      name: "Green Capsicum",
-      price: "$14.99",
-    },
-    { id: 5, image: "/assets/corn.png", name: "Corn", price: "$14.99" },
-  ];
+  const products = fetchProducts(5);
+  return (
+    <Suspense fallback={<ProductSkeleton length={5}/>}>
+      <NewestProductsClient products={products} />
+    </Suspense>
+  );
+}
+
+function NewestProductsClient({ products }) {
+  const productsData = use(products);
+  console.log(productsData?.products);
 
   return (
     <div className="px-4 sm:px-6 lg:px-8 ">
@@ -39,8 +31,8 @@ export default function NewestProducts() {
 
       {/* Product Cards */}
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
-        {card.map((item) => (
-          <ProductCard key={item.id} item={item} />
+        {productsData?.products.map((product) => (
+          <ProductCard key={product.id} product={product} />
         ))}
       </div>
     </div>

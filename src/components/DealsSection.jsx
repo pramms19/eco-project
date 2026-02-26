@@ -1,59 +1,53 @@
 import { ArrowRight } from "lucide-react";
 import DealsCard from "./DealsCard";
+import { Suspense, use } from "react";
+import {ProductSkeletonCard} from "./ProductSkeletonCard";
+import { fetchProducts } from "../actions/fetchproducts";
 
 export default function DealsSection() {
+  const products = fetchProducts(3);
+  return (
+    <Suspense fallback={<ProductSkeletonCard />}>
+      <NewDealsSection products={products} />
+    </Suspense>
+  );
+}
+
+function NewDealsSection({ products }) {
+  const productsData = use(products);
+  console.log(productsData?.products);
+
   const card = [
     {
       id: 1,
-      image: "/assets/leaf.png",
-      name: "Chinese Cabbage",
-      price: "$14.99",
+      name: "Hot Deals",
     },
     {
       id: 2,
-      image: "/assets/lettuce.png",
-      name: "Green Lettuce",
-      price: "$14.99",
+      name: "Best Seller",
     },
     {
       id: 3,
-      image: "/assets/capsicum.png",
-      name: "Green Capsicum",
-      price: "$14.99",
+      name: "Top Rated",
     },
   ];
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 py-10 ">
-      <div className=" grid grid-cols-1 gap-4">
-        <div className="text-xl font-medium text-secondary text-center lg:text-left">
-          Hot Deals
-        </div>
-        {card.map((item) => {
-          return <DealsCard key={item.id} item={item} />;
-        })}
-      </div>
-      <div className="grid grid-cols-1 gap-4">
-        <div className="text-xl font-medium text-secondary text-center lg:text-left">
-          Best Seller
-        </div>
-        {card.map((item) => {
-          return <DealsCard key={item.id} item={item} />;
-        })}
-      </div>
-      <div className="grid grid-cols-1 gap-4">
-        <div className="text-xl font-medium text-secondary text-center lg:text-left">
-          Top Rated
-        </div>
-        {card.map((item) => {
-          return <DealsCard key={item.id} item={item} />;
-        })}
-      </div>
+      {card.map((item) => {
+        return (
+          <div className=" grid grid-cols-1 gap-4">
+            <div className="text-xl font-medium text-secondary text-center lg:text-left">
+              {item.name}
+            </div>
+            {productsData.products.map((product) => {
+              return <DealsCard key={product.id} product={product} />;
+            })}
+          </div>
+        );
+      })}
 
       <div className=" bg-[url(/assets/bg1.jpg)] bg-cover bg-center w-full lg:w-auto lg:max-w-sm overflow-hidden rounded-md col-span-1 md:col-span-3 lg:col-span-1 ">
-        {/* <img
-          src="/assets/bg1.jpg"
-          className="h-105 max-w-sm object-contain overflow-hidden rounded-md"
-        /> */}
         <div className="grid justify-items-center">
           <div className="py-8 text-center space-y-2">
             <div className="text-sm font-medium text-secondary">
