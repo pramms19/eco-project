@@ -18,15 +18,13 @@ export function DealsSkeletonCard() {
 export function DealsSkeleton({ length }) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 py-10 ">
-      {Array.from({ length }).map((product, index) => {
-        return (
-          <div className="grid grid-cols-1 gap-4">
-            {Array.from({ length }).map((product, index) => {
-              return <DealsSkeletonCard key={index} />;
-            })}
-          </div>
-        );
-      })}
+      {Array.from({ length }).map((product, index) => (
+        <div className="grid grid-cols-1 gap-4" key={index}>
+          {Array.from({ length }).map((product, index) => (
+            <DealsSkeletonCard key={index} />
+          ))}
+        </div>
+      ))}
       <div className="bg-background rounded-sm flex items-center p-2"></div>
     </div>
   );

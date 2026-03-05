@@ -5,12 +5,13 @@
 }
 
 @theme{
-  --color-primary:#00B207;
-  --color-background:#EDF2EE;
+  --color-primary:#c71a5f;
+  --color-background:#faf5f7;
   --color-sale:#FF8A00;
-  --color-dark:#2C742F;
-  --color-secondary:#1A1A1A;
+  --color-dark:#8f093e;
+  --color-secondary:#121212;
   --color-yellow:#FCC900;
+  --color-hover:#faebf1;
 }
 
 

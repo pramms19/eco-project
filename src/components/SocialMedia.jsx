@@ -2,12 +2,12 @@ import { Quote } from "lucide-react";
 
 export default function SocialMedia() {
   const card = [
-    { id: 1, image: "/assets/sm1.jpg" },
-    { id: 2, image: "/assets/sm2.jpg" },
-    { id: 3, image: "/assets/sm3.jpg" },
-    { id: 4, image: "/assets/sm4.jpg" },
-    { id: 5, image: "/assets/sm5.jpg" },
-    { id: 6, image: "/assets/sm6.jpg" },
+    { id: 1, image: "/assets/sm-1.jpg" },
+    { id: 2, image: "/assets/sm-2.jpg" },
+    { id: 3, image: "/assets/sm-3.jpg" },
+    { id: 4, image: "/assets/sm-4.jpeg" },
+    { id: 5, image: "/assets/sm-5.jpg" },
+    { id: 6, image: "/assets/sm-6.jpg" },
   ];
   return (
     <div className="px-4 sm:px-6 lg:px-8 ">

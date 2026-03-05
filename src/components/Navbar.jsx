@@ -5,9 +5,9 @@ export default function Navbar() {
     <div className="border-t border-neutral-200">
       <div className="px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between ">
         <div className="flex gap-2 items-center">
-          <img src="/assets/logo.png" alt="Logo" />
-          <p className="font-semibold text-neutral-800 text-2xl lg:text-3xl">
-            Eco
+          {/* <img src="/assets/logo.png" alt="Logo" /> */}
+          <p className="font-semibold text-dark text-2xl lg:text-3xl">
+            Glow
           </p>
         </div>
 

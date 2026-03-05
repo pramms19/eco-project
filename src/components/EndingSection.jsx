@@ -3,9 +3,9 @@ export default function EndingSection() {
     <div className="bg-background px-4 sm:px-6 lg:px-8  mt-14 py-8">
       <div className="flex justify-between items-center">
         <div className="flex gap-2 items-center">
-          <img src="/assets/logo.png" alt="Logo" />
-          <p className="font-semibold text-neutral-800 text-xl lg:text-3xl">
-            Eco
+          {/* <img src="/assets/logo.png" alt="Logo" /> */}
+          <p className="font-semibold text-dark text-xl lg:text-3xl">
+            Glow
           </p>
         </div>
 

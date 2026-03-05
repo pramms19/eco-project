@@ -1,45 +1,60 @@
 import { useEffect, useState } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import { Suspense, use } from "react";
+import { fetchCategories } from "../actions/fetchCategories";
+import { ProductSkeleton } from "./ProductSkeletonCard";
+
 
 export default function TopCategory() {
-  const CategoryCard = [
-    {
-      id: 1,
-      image: "/assets/vegs2.png",
-      title: "Vegetables",
-      number: "165 Products",
-    },
-    {
-      id: 2,
-      image: "/assets/fruits.png",
-      title: "Fresh Fruits",
-      number: "137 Products",
-    },
-    {
-      id: 3,
-      image: "/assets/fish.png",
-      title: "River Fish",
-      number: "48 Products",
-    },
-    { id: 4, image: "/assets/meat.png", title: "Meat", number: "58 Products" },
-    {
-      id: 5,
-      image: "/assets/sd.png",
-      title: "Drinks and Water",
-      number: "70 Products",
-    },
-    {
-      id: 6,
-      image: "/assets/snacks.png",
-      title: "Snacks",
-      number: "90 Products",
-    },
-  ];
+  // const CategoryCard = [
+  //   {
+  //     id: 1,
+  //     image: "/assets/vegs2.png",
+  //     title: "Vegetables",
+  //     number: "165 Products",
+  //   },
+  //   {
+  //     id: 2,
+  //     image: "/assets/fruits.png",
+  //     title: "Fresh Fruits",
+  //     number: "137 Products",
+  //   },
+  //   {
+  //     id: 3,
+  //     image: "/assets/fish.png",
+  //     title: "River Fish",
+  //     number: "48 Products",
+  //   },
+  //   { id: 4, image: "/assets/meat.png", title: "Meat", number: "58 Products" },
+  //   {
+  //     id: 5,
+  //     image: "/assets/sd.png",
+  //     title: "Drinks and Water",
+  //     number: "70 Products",
+  //   },
+  //   {
+  //     id: 6,
+  //     image: "/assets/snacks.png",
+  //     title: "Snacks",
+  //     number: "90 Products",
+  //   },
+  // ];
+  const categories = fetchCategories(10);
+  return (
+    <Suspense fallback={<ProductSkeleton length={5} />}>
+      <CategoriesList categories={categories} />
+    </Suspense>
+  );
+}
+
+function CategoriesList({ categories }) {
+  const categoryData = use(categories);
+  console.log("category", categoryData);
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const [cardsToShow, setCardsToShow] = useState(5); // Number of cards to show at once
-  const maxIndex = CategoryCard.length - cardsToShow;
+  const maxIndex = categoryData.length - cardsToShow;
 
   useEffect(() => {
     const updateCards = () => {
@@ -80,24 +95,26 @@ export default function TopCategory() {
               transform: `translateX(-${currentIndex * (100 / cardsToShow)}%)`,
             }}
           >
-            {CategoryCard.map((item, index) => {
+            {categoryData.map((category, index) => {
               return (
                 <div
-                  key={item.id}
+                  key={index}
+                  category={category}
                   className="border border-neutral-200 hover:border-primary hover:shadow-lg hover:shadow-green-50 rounded-sm flex flex-col items-center place-content-center p-6 text-center shrink-0"
                   style={{ width: `calc(${100 / cardsToShow}% - 1rem)` }}
                 >
-                  <img
-                    src={item.image}
-                    alt="Vegetables"
+                  {/* <img
+                    // src={item.image}
+                    src="/"
+                    alt={category.name}
                     className="pb-2 h-20 w-20"
-                  />
+                  /> */}
                   <div className="text-lg text-primary font-medium">
-                    {item.title}
+                    {category.name}
                   </div>
-                  <div className="text-sm text-neutral-400 font-normal">
+                  {/* <div className="text-sm text-neutral-400 font-normal">
                     {item.number}
-                  </div>
+                  </div> */}
                 </div>
               );
             })}

@@ -2,13 +2,13 @@ import { NavLink } from "react-router-dom";
 import ProductCard from "./ProductCard";
 import { ArrowRight } from "lucide-react";
 import { Suspense, use } from "react";
-import { fetchProducts } from "../actions/fetchproducts";
+import { fetchProducts } from "../actions/fetchProducts";
 import { ProductSkeleton } from "./ProductSkeletonCard";
 
 export default function NewestProducts() {
   const products = fetchProducts(5);
   return (
-    <Suspense fallback={<ProductSkeleton length={5}/>}>
+    <Suspense fallback={<ProductSkeleton length={5} />}>
       <NewestProductsClient products={products} />
     </Suspense>
   );

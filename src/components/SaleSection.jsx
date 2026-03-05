@@ -12,7 +12,7 @@ export default function SaleSection() {
       <div className="grid grid-col-1 lg:grid-cols-3 gap-5">
         
         {/* Card */}
-        <div className="bg-[url(/assets/monthbg.jpg)] bg-cover bg-center h-85 lg:h-105 w-auto overflow-hidden rounded-md">
+        <div className="bg-[url(/assets/mas.png)] bg-cover bg-center h-85 lg:h-105 w-auto overflow-hidden rounded-md">
           <div className="grid justify-items-center">
             <div className="pt-8 text-center space-y-5">
               <div className="text-sm text-white font-medium">BEST DEALS</div>
@@ -65,15 +65,15 @@ export default function SaleSection() {
           </div>
         </div>
 
-        <div className="bg-[url(/assets/meatbg.jpg)] bg-cover bg-center h-85 lg:h-105 w-auto overflow-hidden rounded-md">
+        <div className="bg-[url(/assets/lip.jpg)] bg-cover bg-center h-85 lg:h-105 w-auto overflow-hidden rounded-md">
           <div className="grid justify-items-center">
             <div className="pt-8 text-center space-y-5">
-              <div className="text-sm text-white font-medium">85% FAT FREE</div>
+              <div className="text-sm text-white font-medium">New Collection</div>
               <div className="text-white text-4xl font-semibold">
-                Low-Fat Meat
+                Long-Lasting
               </div>
               <div className="text-white text-lg flex gap-2 justify-center">
-                Started at <div className="text-sale font-semibold">$79.99</div>
+                Started at <div className="text-sale font-semibold">$19.99</div>
               </div>
               <button className="rounded-full flex gap-2 justify-self-center bg-neutral-50 mt-4 px-4 lg:px-5 py-2.5 text-sm lg:text-base font-medium text-primary hover:bg-background">
                 Shop now <ArrowRight />
@@ -82,14 +82,14 @@ export default function SaleSection() {
           </div>
         </div>
 
-        <div className="bg-[url(/assets/fruitbg.jpg)] bg-cover bg-center h-85 lg:h-105 w-auto overflow-hidden rounded-md">
+        <div className="bg-[url(/assets/bg-mu.jpg)] bg-cover bg-center h-85 lg:h-105 w-auto overflow-hidden rounded-md">
           <div className="grid justify-items-center">
             <div className="pt-8 text-center space-y-5">
               <div className="text-sm text-secondary font-medium">
                 SUMMER SALE
               </div>
               <div className="text-secondary text-4xl font-semibold">
-                100% Fresh Fruit
+                100% Flawless
               </div>
               <div className="text-secondary text-lg flex gap-2 justify-center">
                 Up to

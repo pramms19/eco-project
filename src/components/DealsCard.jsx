@@ -2,7 +2,7 @@ import { Handbag, Star, Heart, Eye } from "lucide-react";
 
 export default function DealsCard({ product }) {
   return (
-    <div className="group relative border border-neutral-200 hover:border-primary hover:shadow-lg hover:shadow-green-50 rounded-sm flex items-center p-2">
+    <div className="group relative border border-neutral-200 hover:border-primary hover:shadow-lg hover:shadow-hover rounded-sm flex items-center p-2">
       <div className="flex justify-between content -center gap-5">
         <div className="flex space-x-4 items-center">
           <img src={product.images} alt="image" className="h-20" />

@@ -35,7 +35,7 @@ export default function HeaderSection() {
             Welcome to Shopery
           </div>
           <div className="text-4xl/10 md:text-5xl/15 lg:text-6xl/20 font-semibold text-secondary text-center lg:text-left">
-            Fresh & Healthy Organic Food
+            Flawless & Glowly Makeup Products
           </div>
           <div className="flex gap-2 text-3xl/15 text-secondary">
             Sale up to <div className="font-semibold text-sale">30% OFF</div>
@@ -49,9 +49,9 @@ export default function HeaderSection() {
         </div>
         <div className="place-items-center">
           <img
-            src="/assets/vegs.png"
-            alt="Vegetables"
-            className="object-cover md:shrink-0 max-w-sm md:max-w-xl lg:max-w-2xl"
+            src="/assets/ct.png"
+            alt="Makeups"
+            className="object-cover md:shrink-0 max-w-sm md:max-w-md lg:max-w-lg"
           />
         </div>
       </div>
