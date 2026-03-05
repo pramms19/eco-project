@@ -26,7 +26,7 @@ This is a responsive website built using React and Tailwind CSS. Products in thi
 ## Installation
 
 1. Clone the repository
-   - git clone [repository link](https://github.com/pramms19/eco-project.git)
+   - git clone [https://github.com/pramms19/eco-project.git](https://github.com/pramms19/eco-project.git)
 2. Install dependencies
    - npm install
 3. Run the project
@@ -34,4 +34,4 @@ This is a responsive website built using React and Tailwind CSS. Products in thi
 
 ## Author
 Pramada Shrestha
-[Github](https://github.com/pramms19)
+[https://github.com/pramms19](https://github.com/pramms19)
