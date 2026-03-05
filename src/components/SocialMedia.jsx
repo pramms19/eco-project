@@ -1,4 +1,4 @@
-import { Quote } from "lucide-react";
+import { Instagram, Quote } from "lucide-react";
 
 export default function SocialMedia() {
   const card = [
@@ -18,11 +18,17 @@ export default function SocialMedia() {
       <div className="grid grid-cols-3 lg:grid-cols-6 gap-6 pt-8 place-items-center">
         {card.map((item) => {
           return (
-            <div key={item.id} className="rounded-md">
+            <div key={item.id} className="group relative rounded-md">
               <img
                 src={item.image}
                 className="h-20 md:h-40 w-20 md:w-40 object-cover rounded-md"
               />
+              <div className="absolute top-5/12 left-5/12 hidden group-hover:block">
+              <Instagram
+                size={20}
+                className="text-white"
+              />
+                </div>
             </div>
           );
         })}
