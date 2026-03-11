@@ -1,6 +1,29 @@
 import { Handbag, Star, Heart, Eye } from "lucide-react";
+import { useCart } from "../store/CartStore";
+import { useWishlist } from "../store/WishlistStore";
 
 export default function ProductCard({ product }) {
+  // const [cartItems, setCartItems] = useCartStorage("cartItems", []);
+
+  // const addToCart = () => {
+  //   console.log('hello')
+  //   const existingItem = cartItems.find((item) => item.id === product.id);
+  //   if (existingItem) {
+  //     const updatedCart = cartItems.map((item) =>
+  //       item.id === product.id
+  //         ? { ...item, quantity: item.quantity + 1 }
+  //         : item,
+  //     );
+  //     setCartItems(updatedCart);
+  //   } else {
+  //     setCartItems([...cartItems, { ...product, quantity: 1 }]);
+  //   }
+  // };
+
+  const { addToCart } = useCart();
+  const { addToWishlist, isWishlisted } = useWishlist();
+  const active = isWishlisted(product.id);
+
   return (
     <div className="group relative border border-neutral-200 hover:border-primary hover:shadow-lg hover:shadow-hover rounded-sm flex flex-col items-center p-4">
       <img src={product.images} alt="apple" className="pb-2" />
@@ -18,18 +41,23 @@ export default function ProductCard({ product }) {
             <Star size={10} className="fill-background text-background" />
           </div>
         </div>
-        <div className="bg-background hover:bg-primary hover:text-white rounded-full place-content-center h-8 md:h-10 w-8 md:w-10 p-1 md:p-2">
+        <button
+          onClick={() => addToCart(product)}
+          className="bg-background hover:bg-primary hover:text-white rounded-full place-content-center h-8 md:h-10 w-8 md:w-10 p-1 md:p-2"
+        >
           <Handbag strokeWidth={1} />
-        </div>
-        <div className="absolute top-1/14 right-4 hidden group-hover:block space-y-2">
-          <Heart
-            strokeWidth={1}
+        </button>
+        <div className="absolute top-1/14 right-4 hidden group-hover:flex flex-col space-y-2">
+          <button
+            onClick={() => addToWishlist(product)}
             className="bg-white  hover:bg-primary hover:text-white rounded-full h-8 md:h-10 w-8 md:w-10 p-1 md:p-2"
-          />
-          <Eye
-            strokeWidth={1}
-            className="bg-white  hover:bg-primary hover:text-white rounded-full h-8 md:h-10 w-8 md:w-10 p-1 md:p-2"
-          />
+          >
+            {active ? <Heart strokeWidth={0} fill="#c71a5f" /> : <Heart strokeWidth={1} />}
+          </button>
+
+          <button className="bg-white  hover:bg-primary hover:text-white rounded-full h-8 md:h-10 w-8 md:w-10 p-1 md:p-2">
+            <Eye strokeWidth={1} />
+          </button>
         </div>
       </div>
     </div>

@@ -1,6 +1,12 @@
 import { Handbag, Star, Heart, Eye } from "lucide-react";
+import { useCart } from "../store/CartStore";
+import { useWishlist } from "../store/WishlistStore";
 
 export default function DealsCard({ product }) {
+  const { addToCart } = useCart();
+  const { addToWishlist, isWishlisted } = useWishlist();
+  const active = isWishlisted(product.id);
+
   return (
     <div className="group relative border border-neutral-200 hover:border-primary hover:shadow-lg hover:shadow-hover rounded-sm flex items-center p-2">
       <div className="flex justify-between content -center gap-5">
@@ -28,18 +34,27 @@ export default function DealsCard({ product }) {
             <div className="space-y-2">
               <p className="text-primary text-xs text-wrap">{product.title}</p>
               <div className="flex justify-between gap-2">
-                <Handbag
-                  strokeWidth={1}
+                <button
+                  onClick={() => addToCart(product)}
                   className="bg-white  hover:bg-primary hover:text-white rounded-full place-content-center h-8 md:h-10 w-8 md:w-10 p-1 md:p-2"
-                />
-                <Heart
-                  strokeWidth={1}
+                >
+                  <Handbag strokeWidth={1} />
+                </button>
+
+                <button
+                  onClick={() => addToWishlist(product)}
                   className="bg-white  hover:bg-primary hover:text-white rounded-full h-8 md:h-10 w-8 md:w-10 p-1 md:p-2"
-                />
-                <Eye
-                  strokeWidth={1}
-                  className="bg-white  hover:bg-primary hover:text-white rounded-full h-8 md:h-10 w-8 md:w-10 p-1 md:p-2"
-                />
+                >
+                  {active ? (
+                    <Heart strokeWidth={0} fill="#c71a5f" />
+                  ) : (
+                    <Heart strokeWidth={1} />
+                  )}
+                </button>
+
+                <button className="bg-white  hover:bg-primary hover:text-white rounded-full h-8 md:h-10 w-8 md:w-10 p-1 md:p-2">
+                  <Eye strokeWidth={1} />
+                </button>
               </div>
             </div>
           </div>
