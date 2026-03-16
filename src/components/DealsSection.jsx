@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import DealsCard from "./DealsCard";
 import { Suspense, use } from "react";
-import { fetchProducts } from "../actions/fetchProducts";
+import { fetchProducts } from "../actions/fetchproducts";
 import { DealsSkeleton } from "./DealsSkeletonCard";
 
 export default function DealsSection() {
