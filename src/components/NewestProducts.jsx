@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import ProductCard from "./ProductCard";
 import { ArrowRight } from "lucide-react";
 import { Suspense, use } from "react";
-import { fetchProducts } from "../actions/fetchProducts";
+import { fetchProducts } from "../actions/fetchproducts";
 import { ProductSkeleton } from "./ProductSkeletonCard";
 
 export default function NewestProducts() {
